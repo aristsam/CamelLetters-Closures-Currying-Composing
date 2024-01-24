@@ -28,3 +28,10 @@ function first() {
 
 const myFunc = first();
 myFunc();
+
+
+//Currying- example: how to create a multiplier:
+
+const curriedFunction = (a) => (b) =>a * b ;
+const multiplyBy5 = curriedFunction(5);
+multiplyBy5(3); //returns 15.
