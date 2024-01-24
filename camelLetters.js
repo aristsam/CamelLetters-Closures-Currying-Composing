@@ -31,7 +31,13 @@ myFunc();
 
 
 //Currying- example: how to create a multiplier:
-
 const curriedFunction = (a) => (b) =>a * b ;
 const multiplyBy5 = curriedFunction(5);
 multiplyBy5(3); //returns 15.
+
+//Composing- example:
+const compose = (f, g) => (a) => f(g(a));
+const add1 = (num) => num + 1;
+const add5 = (num) => num + 5;
+compose(add1, add5)(10) // returns 16.
+
